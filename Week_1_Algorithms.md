@@ -27,7 +27,7 @@ flowchart TD
     D --> F["Ducha y cepillado de dientes"]
     E --> F
     F --> G{"¿Es jueves?"}
-    G -- Sí --> H["Alistar para la oficina"]
+    G -- Sí --> H["Alistarse para la oficina"]
     H --> I["Ir a la oficina"]
     G -- No --> J["Quedarse en casa"]
     I --> K["Trabajar"]
