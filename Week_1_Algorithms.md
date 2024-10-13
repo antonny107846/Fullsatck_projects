@@ -16,4 +16,44 @@ flowchart TD
     K -->|Si| L[Precionar el botón de like, el botón de suscribirse o ambos]
     K -->|No| M[Terminar de ver el video]
     L --> M
+
+```
+```mermaid
+flowchart TD
+    A["Inicio del día"] --> B["6:00 AM - Levantarse"]
+    B --> C{"¿Se hace tarde?"}
+    C -- No --> D["Acomodar la cama"]
+    C -- Sí --> E["Dejar la cama desordenada"]
+    D --> F["Ducha y cepillado de dientes"]
+    E --> F
+    F --> G{"¿Es jueves?"}
+    G -- Sí --> H["Alistar para la oficina"]
+    H --> I["Ir a la oficina"]
+    G -- No --> J["Quedarse en casa"]
+    I --> K["Trabajar"]
+    J --> K
+    K --> L["Desayunar mientras trabajas"]
+    L --> M["Almorzar mientras trabajas"]
+    M --> N["Revisar correos electrónicos"]
+    N --> O{"¿Posible solución para cliente?"}
+    O -- Sí --> P["Llamar a clientes"]
+    O -- No --> Q["Continuar trabajando"]
+    Q --> R["Investigar casos activos"]
+    R --> S{"¿Adelantaste todo lo agendado?"}
+    S -- No --> N
+    S -- Sí --> T["Tomar descanso adicional"]
+    T --> U["Hablar con compañeros"]
+    U --> V["Tomar una siesta"]
+    V --> W{"¿Es día de gimnasio?"}
+    W -- Sí --> X["Ir al gimnasio"]
+    W -- No --> Y["Terminar día antes"]
+    X --> Z["9:30 PM - Fin del día"]
+    Z --> AA["Descansar"]
+    AA --> A
+    Y --> AA
+
+
+
+
+
 ```
