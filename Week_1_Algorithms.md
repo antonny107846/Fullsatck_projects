@@ -1,56 +1,86 @@
 ```mermaid
 
 flowchart TD
-    A[Abrir Buscador Web o Aplicacion de YT] --> B{¿Ya tiene sesión iniciada?}
-    B -->|Si| C[Navegar a la pagina principal]
-    B -->|No| D[Iniciar sesión en YT]
+    A[Encender el dispositivo] --> B{¿Está conectado a Internet?}
+    B -->|Sí| C[Abrir buscador web o aplicación de YouTube]
+    B -->|No| D[Conectarse a la red Wi-Fi o datos móviles]
     D --> C
-    C --> E[Buscar un video que le interese ver]
-    E --> F{¿Encontro el video?}
-    F -->|Si| G[Clickear el video]
-    F -->|No| H[Modificar lo que quiere ver]
-    H --> E
-    G --> I[Ajustar las configuraciones del video - Calidad, Subtitulos ...]
-    I --> J[Ver el video]
-    J --> K{¿Le gustó el video y quiere dar like y suscribirse?}
-    K -->|Si| L[Precionar el botón de like, el botón de suscribirse o ambos]
-    K -->|No| M[Terminar de ver el video]
-    L --> M
+    C --> E{¿Ya tiene sesión iniciada?}
+    E -->|Sí| F[Navegar a la página principal de YouTube]
+    E -->|No| G[Iniciar sesión en YouTube]
+    G --> F
+    F --> H[Buscar un video que le interese ver]
+    H --> I{¿Encontró el video?}
+    I -->|Sí| J[Clickear el video]
+    I -->|No| K[Modificar la búsqueda para afinar resultados]
+    K --> H
+    J --> L[Ajustar configuraciones del video - Calidad, Subtítulos, Velocidad]
+    L --> M[Ver el video]
+    M --> N{¿Le gustó el video?}
+    N -->|Sí| O[Presionar el botón de like y/o suscribirse al canal]
+    N -->|No| P[Terminar de ver el video]
+    O --> P
+    P --> Q[Apagar dispositivo si es necesario]
 
 ```
 ```mermaid
 flowchart TD
-    A["Inicio del día"] --> B["6:00 AM - Levantarse"]
+    A["Inicio del día - 6:00 AM"] --> B["Levantarse"]
     B --> C{"¿Se hace tarde?"}
     C -- No --> D["Acomodar la cama"]
     C -- Sí --> E["Dejar la cama desordenada"]
     D --> F["Ducha y cepillado de dientes"]
     E --> F
-    F --> G{"¿Es jueves?"}
-    G -- Sí --> H["Alistarse para la oficina"]
-    H --> I["Ir a la oficina"]
-    G -- No --> J["Quedarse en casa"]
-    I --> K["Trabajar"]
-    J --> K
-    K --> L["Desayunar mientras trabajas"]
-    L --> M["Almorzar mientras trabajas"]
-    M --> N["Revisar correos electrónicos"]
-    N --> O{"¿Posible solución para cliente?"}
-    O -- Sí --> P["Llamar a clientes"]
-    O -- No --> Q["Continuar trabajando"]
-    Q --> R["Investigar casos activos"]
+    F --> G["Vestirse"]
+    G --> H{"¿Es jueves?"}
+    
+    %% Oficina o casa
+    H -- Sí --> I["Alistarse para la oficina - Preparar computadora, documentos, almuerzo, etc."]
+    I --> J["Salir hacia la oficina"]
+    J --> K["Llegar a la oficina y prepararse para trabajar"]
+    
+    H -- No --> L["Quedarse en casa y encender computadora"]
+
+    %% Rutina de trabajo
+    K --> M["Revisar agenda del día"]
+    L --> M
+    M --> N["Desayunar mientras trabajas"]
+    N --> O["Revisar correos electrónicos"]
+    O --> P{"¿Posible solución para cliente?"}
+    
+    %% Llamadas y tareas del trabajo
+    P -- Sí --> Q["Llamar a clientes con posible solución"]
+    P -- No --> R["Continuar trabajando en los casos activos"]
+    
+    %% Progreso y pausas
     R --> S{"¿Adelantaste todo lo agendado?"}
-    S -- No --> N
+    S -- No --> O
     S -- Sí --> T["Tomar descanso adicional"]
-    T --> U["Hablar con compañeros"]
-    U --> V["Tomar una siesta"]
-    V --> W{"¿Es día de gimnasio?"}
-    W -- Sí --> X["Ir al gimnasio"]
-    W -- No --> Y["Terminar día antes"]
-    X --> Z["9:30 PM - Fin del día"]
-    Z --> AA["Descansar"]
-    AA --> A
-    Y --> AA
+    
+    T --> U["Hablar con compañeros o relajarse"]
+    U --> V["Tomar una siesta o leer"]
+    
+    %% Almuerzo
+    V --> W["Almorzar fuera de la oficina"]
+    
+    %% Fin de la jornada
+    W --> X{"¿Es día de gimnasio?"}
+    X -- Sí --> Y["Ir al gimnasio"]
+    X -- No --> Z["Terminar día antes"]
+    
+    %% Cierre del día
+    Y --> AA["Volver a casa y cenar"]
+    Z --> AA
+    AA --> AB["Relajarse o hacer actividades personales - Ver series, leer, etc."]
+    
+    %% Fin de la rutina
+    AB --> AC{"¿Es necesario revisar correos antes de dormir?"}
+    AC -- Sí --> AD["Revisar correos nuevamente"]
+    AD --> AE["9:30 PM - Fin del día"]
+    
+    AC -- No --> AE
+    AE --> AF["Apagar dispositivos y prepararse para dormir"]
+    AF --> A
 
 
 
