@@ -1,1 +1,29 @@
+// Ejercicio # 1
+
+Inicio
+Definir <Precio>;
+Definir <Descuento>;
+Definir <Precio_final>;
+
+Mostrar "Cual es el precio de su producto?";
+Pedir <Precio>;
+
+Mostrar "Calculando descuneto, espere un momento.";
+
+
+Si (<Precio> < 100 )
+    <Descuento> = 2;
+    <<Precio_final> = <Precio> - (0,02 * <Precio>)>;
+Sino (<Precio> > 100)
+    <Descuento> = 10;
+    <<Precio_final> = <Precio> - (0,1* <Precio>)>;
+FinSi
+
+Mostrar "Su descuento fue de <Descuento>%!";
+Mostrar "El precio final es de <Precio_final>";
+
+Fin
+
+//Ejercicio # 2
+
 
