@@ -26,4 +26,22 @@ Fin
 
 //Ejercicio # 2
 
+Inicio
+
+Definir <tiempo_segundos>;
+Definir <Faltan_segundos>;
+
+Mostrar "Digite tiempo en segundos.";
+Pedir <tiempo_segundos>;
+
+Si (<tiempo_segundos> < 600)
+    <Faltan_segundos> = 600 - <tiempo_segundos>
+    <Mostrar "Faltan " <Faltan_segundos> " segundos para llegar a 10 minutos.">;
+Sino 
+    <Mostrar "Tiempo mayor o igual a 10 minutos.">;
+FinSi
+Fin
+
+//Ejercicio # 3
+
 
