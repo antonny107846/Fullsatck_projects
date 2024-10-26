@@ -44,4 +44,19 @@ Fin
 
 //Ejercicio # 3
 
+Inicio
+Definir <numero>;
+Definir <suma> = 0;
+Definir <contador> = 1;
+
+Mostrar "Ingrese un número:";
+Pedir <numero>;
+
+Mientras que (<contador> <= <numero>) repetir
+    <suma> = <suma> + <contador>;
+    <contador> = <contador> + 1;
+FinMientras
+
+Mostrar "La suma de todos los números desde 1 hasta " <numero> " es: " <suma>;
+Fin
 
