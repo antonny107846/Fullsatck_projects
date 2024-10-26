@@ -60,3 +60,4 @@ FinMientras
 Mostrar "La suma de todos los números desde 1 hasta " <numero> " es: " <suma>;
 Fin
 
+
