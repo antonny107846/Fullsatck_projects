@@ -1,5 +1,7 @@
 <H1>Ejercicios pseudocodigo</H1>
 
+<h3>Ejercicio 1</h3>
+
 ```mermaid
 flowchart TD
     A(["Inicio"]) --> B["Definir Precio, Descuento, Precio final"]
@@ -22,6 +24,8 @@ flowchart TD
     J@{ shape: display}
     K@{ shape: display}
 ```
+<h3>Ejercicio 2</h3>
+
 ```mermaid
 flowchart TD
     A(["Inicio"]) --> B["Definir tiempo_segundos, Faltan_segundos"]
@@ -40,6 +44,8 @@ flowchart TD
     G@{ shape: display}
     H@{ shape: display}
 ```
+<h3>Ejercicio 3</h3>
+
 ```mermaid
 flowchart TD
     A(["Inicio"]) --> B["Definir numero, suma, contador"]
