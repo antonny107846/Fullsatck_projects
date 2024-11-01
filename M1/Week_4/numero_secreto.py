@@ -15,7 +15,7 @@ while intentos > 0:
 
     if numero_usuario == num_secreto:
         print("¡Felicidades! Adivinaste el número secreto.")
-        break  # Termina el bucle si el usuario adivina
+        break
 
     elif intentos == 0:
         print("Te has quedado sin intentos.")
